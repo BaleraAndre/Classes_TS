@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const pessoa_1 = __importDefault(require("./classes/pessoa"));
+const endereco_1 = __importDefault(require("./classes/endereco"));
+const carro_1 = __importDefault(require("./classes/carro"));
+const animal_1 = __importDefault(require("./classes/animal"));
+const console_1 = __importDefault(require("./classes/console"));
+const animal1 = new animal_1.default("toto", "cachorro");
+const console1 = new console_1.default("one", "xbox");
+const carro1 = new carro_1.default("fusca", "vw");
+const endereco1 = new endereco_1.default("alameda", "salvador", 1574);
+const pessoa1 = new pessoa_1.default("andre", 28, [endereco1]);
+pessoa1.adicionarAnimal(animal1);
+pessoa1.adicionarCarro(carro1);
+pessoa1.adicionarEndereco(endereco1);
+pessoa1.adicionarConsole(console1);
+console.log(pessoa1.toString());
