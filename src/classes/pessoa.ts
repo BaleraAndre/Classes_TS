@@ -2,9 +2,12 @@ import Endereco from "./endereco";
 import Carro from "./carro";
 import Animal from "./animal";
 import Console from "./console";
+import { decoradorPropriedade } from "../decoratos/decoradorPropriedade";
 
 export default class Pessoa {
+    @decoradorPropriedade
     private _nome: string;
+    @decoradorPropriedade
     private _idade: number;
     private _enderecos: Endereco[]; 
     private _animais?: Animal[];  
@@ -90,6 +93,6 @@ export default class Pessoa {
     }
 
     public toString(): string {
-        return `Nome: ${this._nome}\nIdade: ${this._idade}\nEndereços: ${JSON.stringify(this._enderecos)}\nAnimais: ${JSON.stringify(this._animais)}\nCarros: ${JSON.stringify(this._carros)}\nConsoles: ${JSON.stringify(this._consoles)}`;
+        return `Nome: ${this._nome} Idade: ${this._idade}\n`;
     }
 }
